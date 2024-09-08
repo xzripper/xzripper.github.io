@@ -114,7 +114,7 @@
 
         const text = document.querySelector('.progress-ring__text');
         
-        const circumference = 2 * Math.PI * (circle.r.baseVal.value);
+        const circumference = 2 * Math.PI * circle.r.baseVal.value;
         
         circle.style.strokeDashoffset = circumference - (percent / 100) * circumference;
 
