@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monkey Pox Escalation AI Analyzer</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+</head>
+
+<style>
+    html, body {
+        background-color: rgb(16, 16, 16);
+
+        color: rgb(255, 230, 230);
+
+        font-family: "Cinzel";
+
+        height: 100%;
+        margin: 0;
+
+        display: flex;
+        flex-direction: column;
+
+        justify-content: center;
+        align-items: center;
+    }
+
+    .progress-ring {
+        position: relative;
+
+        display: inline-block;
+
+        width: 120px;
+        height: 120px;
+    }
+
+    .progress-ring__svg {
+        transform: rotate(-90deg);
+    }
+
+    .progress-ring__circle {
+        stroke-dasharray: 314;
+        stroke-dashoffset: 314;
+
+        transition: stroke-dashoffset 2.5s;
+    }
+
+    .progress-ring__text {
+        top: 50%;
+        left: 50%;
+
+        transform: translate(-50%, -50%);
+
+        position: absolute;
+
+        font-size: 25px;
+
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    code {
+        color: grey;
+
+        font-size: xx-large;
+    }
+
+    a {
+        color: rgb(120, 120, 230);
+
+        text-decoration: none;
+    }
+</style>
+
+<body>
+    <h1>Monkey Pox AI Situation Analysis.</h1>
+
+    <h3>Potential chance of future monkey pox "escalation".</h3>
+
+    <div class="progress-ring">
+        <svg class="progress-ring__svg" width="120" height="120"><circle class="progress-ring__circle" stroke="red" stroke-width="14" fill="transparent" r="50" cx="60" cy="60"/></svg><div class="progress-ring__text"></div>
+    </div>
+
+    <pre>Calculated by AI.</pre>
+
+    <br><code>09.08.2024 (9th September, 2024).</code><br>
+
+    <a href="https://www.aljazeera.com/news/2024/9/8/india-records-first-suspected-mpox-case-male-patient-in-isolation">[09.08.2024] First MPOX case in India.</a>
+    <a href="https://apnews.com/article/mpox-africa-outbreak-vaccines-health-congo-3f79d757e7666600c06cbdad39613bc8">[09.08.2024] New 1.000+ cases of MPOX in Congo; Outbreak in Africa is declared as a global emergency.</a>
+    <a href="https://www.wlrn.org/npr-breaking-news/2024-08-14/who-declares-2024-mpox-surge-a-public-health-emergency-of-international-concern">[09.08.2024] MPOX Declared as a public health emergency of international concern.</a>
+    <a href="https://www.today.com/health/news/monkeypox-virus-lockdown-global-emergency-rcna167133">[09.08.2024] New MPOX subtype emerges.</a>
+    <a href="https://www.news-medical.net/news/20240902/UNICEF-issues-emergency-tender-for-mpox-vaccine-procurement.aspx">[09.08.2024] MPOX vaccine shortage in Africa.</a>
+
+    <br><br><br>
+    <div style="color: grey; font-size: small; text-align: center;">
+        <p>AI Analysis Stack: GPT4-Omni + BingGPT (Copilot) + Bing Deep Search.</p>
+        <p>Website launch date: 09.08.2024 (by <a href="https://github.com/xzripper">xzripper</a>).</p>
+    </div>
+</body>
+
+
+<script>
+    const percent = 32.5; // Percentage.
+
+    window.onload = (event) => {
+        const circle = document.querySelector('.progress-ring__circle');
+
+        const text = document.querySelector('.progress-ring__text');
+        
+        const circumference = 2 * Math.PI * (circle.r.baseVal.value);
+        
+        circle.style.strokeDashoffset = circumference - (percent / 100) * circumference;
+
+        text.textContent = `${percent}%`;}
+</script>
+
+</html>
