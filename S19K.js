@@ -5,7 +5,9 @@
  * @returns Nothing.
 */
 export function addS19K() {
-  const s19kElement = document.createElement("video", {id: "S19KElem"});
+  const s19kElement = document.createElement("video");
+
+  s19kElement.id = "S9KElem";
 
   s19kElement.src = "https://github.com/xzripper/SINE19000/raw/refs/heads/main/S19K/SINE19000.mp4"
   s19kElement.loop = true;
