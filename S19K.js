@@ -32,12 +32,6 @@ export function addS19K() {
 export function setS19KActivity(active) {
   const s19kElement = document.getElementById("S19KElem");
 
-  if (!s19kElement) {
-    console.error("S19K: Can't change activity of non-existing S19K element.");
-
-    return;
-  }
-
   s19kElement.hidden = !active;
 }
 
@@ -47,12 +41,6 @@ export function setS19KActivity(active) {
  */
 export function removeS19K() {
   const s19kElement = document.getElementById("S19KElem");
-
-  if (!s19kElement) {
-    console.error("S19K: Can't destroy non-existing S19K element.");
-
-    return;
-  }
 
   s19kElement.remove();
 }
