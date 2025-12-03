@@ -16,7 +16,7 @@ export function addS19K() {
 
   s19kElement.volume = 0.01;
 
-  s19kElement.style.position = "absolute";
+  s19kElement.style.position = "fixed";
   s19kElement.style.left = "100%";
 
   document.body.appendChild(s19kElement);
